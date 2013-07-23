@@ -12,6 +12,14 @@ def get_pixel_value(x, y):
    pixel = data[y * width + x]
    return pixel
 print get_pixel_value(20, 30)
+def get_distance_of_2_pixel(pixel1, pixel2):
+    return  (pixel1[0] - pixel2[0])**2 + \
+            (pixel1[1] - pixel2[1])**2 + \
+            (pixel1[2] - pixel2[2])**2
+
+point1 = get_pixel_value(19,30)
+point2 = get_pixel_value(20,30)
+print get_distance_of_2_pixel(point1,point2)
 
 # Create a new image of the same size as the original
 # and copy a region into the new image
